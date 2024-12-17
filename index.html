@@ -10,7 +10,9 @@
     <!-- con2 -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <!-- Link Swiper's CSS -->
+        <!-- 달력 css -->
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- 내가 만든 css -->
     <link rel="stylesheet" href="./CSS/style.css">
@@ -136,8 +138,16 @@
             </ul>
             <!-- 예약폼 만들기 -->
             <div class="notice">
-                <h3 class="input_title">CHECK IN &ndash; CHECK OUT</h3>
-                <ul>
+                <h3 class="input_title">CHECK IN</h3>
+                <div class="select">
+                    <input type="text" id="datepicker" placeholder="CHECK IN" class="day">
+                </div>
+                <h3 class="input_title">CHECK OUT</h3>
+                <div class="select">
+                    <input type="text" id="datepicker1" placeholder="CHECK OUT" class="day">
+                </div>
+                
+                <!-- <ul>
                     <li>
                         <div class="title">
                             <div class="title_in">CHECK IN &ndash; CHECK OUT</div>
@@ -166,7 +176,7 @@
 
                         </div>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
 
@@ -315,7 +325,8 @@
                     
 
                             포이칸 리조트는 단순한 휴식을 넘어 진정한 자아를 발견하고 내면의 소리에 귀 기울일 수 있는 특별한 환경을 제공합니다.
-                            <br>자연과 하나 되는 경험을 통해 마음의 평화를 찾고, 일상의 복잡함을 벗어나 자신을 돌볼 수 있는 곳.
+                            <br>자연과 하나 되는 경험을 통해 마음의 평화를 찾고, 일상의 복잡함을 벗어나 <br>
+                            몸과 마음을 힐링하는 시간을 보내보세요.
                              <br>이곳에서 머무는 동안은 누구든지 시간의 제약 없이 자신만의 방식으로 휴식과 재충전의 시간을 가질 수 있습니다.
                             
                             
@@ -700,6 +711,32 @@
     });
 });
 
+//달력 START
+$(function () {
+			$("#datepicker").datepicker();
+		});
+		$.datepicker.setDefaults({
+			dateFormat: 'yy-mm-dd' //Input Display Format 변경
+		});
+		$.datepicker.setDefaults({
+			monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] //달력의 월 부분 텍스트
+			, monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip 텍스트
+			, dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 부분 텍스트
+			, dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 부분 Tooltip 텍스트
+		});
+		$(function () {
+			$("#datepicker1").datepicker();
+		});
+		$.datepicker.setDefaults({
+			dateFormat: 'yy-mm-dd' //Input Display Format 변경
+		});
+		$.datepicker.setDefaults({
+			monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] //달력의 월 부분 텍스트
+			, monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip 텍스트
+			, dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 부분 텍스트
+			, dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 부분 Tooltip 텍스트
+		});
+		//달력 END
     </script>
 
 </body>

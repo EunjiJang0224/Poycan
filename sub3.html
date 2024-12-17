@@ -318,18 +318,73 @@
                             </div>
                            
                         </div>
+                        <p class="about about2">BEST REVIEW
+                        </p>
+                        <div class="review-slider-container">
+                            <div class="review-slider">
+                                <div class="review-slide">
+                                    <div class="review-profile">
+                                        <img src="./images/review.jpg" alt="프로필 이미지">
+                                     <p class="user-name">Hin*** S***YOU</p>
+                                    </div>
+                                    <div class="review-content">
+                                        <div class="review-rating">
+                                            <!-- 별점 표시 -->
+                                            ★★★★★
+                                        </div>
+                                        <p>단순히 식사를 하는 곳이 아니라, 자연과 예술, 미식을 경험했습니다.
+                                            <br> 소중한 사람과 특별한 날을 기념하고 싶다면 이 곳을 추천합니다.
+                                            <br>예약은 필수이며, 창가 자리로 요청하면 더 좋습니다.</p>
+                                    </div>
+                                    <div class="review-date">202.12.24</div>
+                                </div>
+                                <div class="review-slide">
+                                    <div class="review-profile">
+                                        <img src="./images/revies.jpg" alt="프로필 이미지">
+                                        <p class="user-name">M**k Sm***TH</p>
+                                    </div>
+                                    <div class="review-content">
+                                        <div class="review-rating">
+                                            <!-- 별점 표시 -->
+                                            ★★★★★
+                                        </div>
+                                        <p>식사하는 동안 창밖으로 보이는 숲의 경치가 정말 아름다웠습니다. 
+                                            <br>음식도 훌륭했지만, 경치가 더해져서 더욱 특별한 경험이었습니다. 
+                                            <br>다음에 다시 방문하고 싶어요!</p>
+                                    </div>
+                                    <div class="review-date">2024.02.15</div>
+                                </div>
+                                <div class="review-slide">
+                                    <div class="review-profile">
+                                        <img src="./images/review2.jpg" alt="프로필 이미지">
+                                        <p class="user-name">김*희</p>
+                                    </div>
+                                    <div class="review-content">
+                                        <div class="review-rating">
+                                            <!-- 별점 표시 -->
+                                            ★★★★★
+                                        </div>
+                                        <p>창으로 보이는 숲의 풍경과 예술적 요리의 조화가 인상적이었으며, 
+                                            <br>모든 코스가 정교하고 맛있었습니다.
+                                            <br>와인 페어링 추천도 완벽해서 특별한 날에 딱 어울리는 곳입니다.</p>
+                                    </div>
+                                    <div class="review-date">2024.08.05</div>
+                                </div>
+                                <!-- 추가 슬라이드들 -->
+                            </div>
+                        </div>
 
                     </div>
 
                 </div>
 
               
-
             </div>
+           
 
         </div>
         
-
+        
 
         <!-- footer_s -->
         <div id="footer_wrap">
@@ -409,6 +464,24 @@
             });
 
         });
+        document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.review-slider');
+    const slides = document.querySelectorAll('.review-slide');
+    let currentIndex = 0;
+
+    function nextSlide() {
+        currentIndex++;
+        if (currentIndex >= slides.length) {
+            currentIndex = 0;
+        }
+        
+        const offset = -currentIndex * 100;
+        slider.style.transform = `translateX(${offset}%)`;
+    }
+
+    // 3초마다 자동 슬라이드 전환
+    setInterval(nextSlide, 3000);
+});
 
 
 
