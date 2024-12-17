@@ -174,6 +174,7 @@ body {
     display: block;
     width: 100%;
     padding: 15px;
+    color: #fff;
     /* border-bottom:1px solid #e1e1e1;  */
 }
 
@@ -279,18 +280,7 @@ body {
 }
 
 /* header_e */
-/* banner_s */
 
-#banner_wrap{
-    height: 780px;
-    background-color: #3f3232;
-}
-.banner{
-    width: 1320px;
-    margin: 0 auto;
-}
-
-/* banner_e */
 /* section1_s */
 
 #contents1_wrap {
@@ -487,7 +477,7 @@ font-weight: 600;}
 .map_r{
     width: 50%;
     text-align: left;
-    padding: 50px 77px;
+    padding: 70px 77px;
     box-sizing: border-box;
     
 }

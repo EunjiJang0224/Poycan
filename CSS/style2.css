@@ -8,13 +8,14 @@ a {
     color: inherit;
 }
 
-ul {
+ul,
+ol {
     list-style: none;
 }
 
 body {
     color: #4B413C;
-    font-family: Pretendard;
+    font-family: FreesentationVF;
     font-size: 14px;
     min-width: 1400px;
     background-color: #fffcf5d4;
@@ -249,34 +250,13 @@ transform: translateY(-5px) rotate(-135deg);
 }
 
 /* header_end */
-/* header_end */
-
-/* banner_S */
+/* banner_start */
 
 #banner {
     height: 870px;
     position: relative;
 }
-.rate_button{
-    position: absolute;
-    top: 660px;
-    left: 290px;
-    z-index: 999999999;
-    color: white;
-    background-color: #6e6e6e9e;
-    padding: 15px;
-    width: 270px;
-    font-size: 18px;
-    text-align: center;
-    letter-spacing: 3px;
-    
-}
-.rate_button:hover{
-    background-color: #000000;
-    color: white;
-}
-
-.banner_title {
+.banner_title{
     position: absolute;
     top: 250px;
     left: 290px;
@@ -297,10 +277,9 @@ transform: translateY(-5px) rotate(-135deg);
     font-size: 11px;
     font-weight: 700;
     position: fixed;
-    top: 150PX;
+    top: 204PX;
     z-index: 10;
     right: 0;
-    color: #4B413C;
 }
 
 .fixed_nav li {
@@ -308,72 +287,81 @@ transform: translateY(-5px) rotate(-135deg);
 }
 
 /* form */
-img {
-    border: 0;
-}
+img{border:0;}      
 
-.input_title {
+   
+
+.input_title{
     color: white;
     margin: 15px 0;
 
 }
 
-.notice {
-    width: 300px;
-    margin: auto;
-    position: absolute;
+.notice{width:300px;
+	margin:auto;
+	position: absolute;
     top: 430px;
     left: 290px;
-    z-index: 99;
+    z-index: 9;
+}
+#datepicker,#datepicker1{
+    width: 275px;
+    height: 34px;
+    background-color: #00000046;
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+    font-size: 15px;
+    padding-left: 20px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    outline: none;
+
+}
+#datepicker1::placeholder{
+    color: white;
+    font-size: 14px;
+}
+#datepicker::placeholder{
+    color: white;
+    font-size: 14px;
 }
 
+	
 /*제목부분*/
-.title {
-    overflow: hidden;
-    padding: 10px 10px;
+.title{overflow:hidden;
+	padding:10px 10px;
     border: 2px solid rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.245);
-
+   
 }
-
-.title_in {
-    float: left;
+.title_in{float:left;
     color: white;
     font-weight: 500;
 }
+.plus{float:right;
+	margin-right:10px;}
+.text_info{padding:10px;
+	background:#ddd;
+	display:none;
+}
+.count_box{
 
-.plus {
-    float: right;
-    margin-right: 10px;
 }
 
-.text_info {
-    padding: 10px;
-    background: #ddd;
-    display: none;
-}
-
-.count_box {}
 
 
-
-.turn .title img {
-    transform: rotate(45deg);
-}
-
-.plus img {
-    transition: transform 0.5s;
-}
+.turn .title img{transform:rotate(45deg);}
+.plus img{transition:transform 0.5s;}
 
 
 /* mainbanner swiper */
 
-.main_swiper {
+.swiper {
     width: 100%;
     height: 100%;
 }
 
-.main-swiper-slide{
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -382,7 +370,7 @@ img {
     align-items: center;
 }
 
-.main-swiper-slide img {
+.swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
@@ -392,99 +380,130 @@ img {
 :root {
     --swiper-theme-color: #fff
 }
-/* banner_E */
-/* contents1_S */
+.rate_button{
+    position: absolute;
+    top: 660px;
+    left: 290px;
+    z-index: 3;
+    color: white;
+    background-color: #6e6e6e9e;
+    padding: 15px;
+    width: 270px;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 3px;
+    
+}
+.rate_button:hover{
+    background-color: #000000;
+}
 
 
- #contents1{
+/* banner_e */
+/* con1_s */
+
+#contents1{
     width: 1320px;
     margin: 0 auto;
-    height: 600px;
-    position: relative;
-   
+    height: 820px;
+    
+    padding-top: 160px;
+    box-sizing: border-box;
+
 }
-.slider-container {
+
+
+/* 자동 슬라이드 */
+.room-slider {
     position: relative;
-    width: 80%; /* 화면의 80% 너비로 설정 */
+    width: 100%;
     overflow: hidden;
-    margin: auto;
-    padding-top: 50px;
 }
 
-.slider {
+.room-container {
     display: flex;
-    transition: transform 1s ease;
-    width: 500%; /* 5개의 이미지를 100%씩 나누어 전체 넓이를 설정 */
-}
-
-.slide {
-    position: relative;
-    width: 20%; /* 각 이미지는 전체 슬라이더의 20% 너비 */
     transition: transform 0.5s ease;
 }
 
-.slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    transition: opacity 0.3s ease;
+.room-item {
+    flex: 0 0 25%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+ 
+}
+.room-item h3{
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-.overlay {
+.room-item img {
+    width: 100%;
+    height: 600px;
+    transition: filter 0.3s ease;
+}
+.height{
+    line-height: 21px;
+}
+.room-info {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
     color: white;
-    font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-.slide:hover img {
-    opacity: 0.6;
-}
-
-.slide:hover .overlay {
+.room-item:hover .room-info {
     opacity: 1;
 }
 
-.slider-container:hover .slider {
-    cursor: pointer;
-}
-.choose{
-    font-size: 26px;
-    font-weight: 400;
-    border-bottom: #4b413c70 2px solid;
-    margin-top: 100px;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    font-family: Palatino Linotype;
-    
-}
-.all{
-    position: absolute;
-    top: 50px;
-    right: 0;
-    opacity: 80%;
+.room-item:hover img {
+    filter: brightness(50%);
 }
 
-/* contents1_E */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* con1_e */
 /* contents2_S */
 
 #contents2{
     width: 1320px;
     margin: 100px auto;
-    height: 960px;
+    height: 880px;
     text-align: center;
+    
     
 }
 .prv{
     font-family: Palatino Linotype;
-    font-size: 10px;
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 10px;
 
 }
 .hotel_name{
@@ -620,7 +639,99 @@ img {
     overflow: hidden;
 }
 /* contents2_e */
-/* footer_S */
+
+/* section3_s */
+
+
+#contents3_wrap{
+    width: 1320px;
+    height:1840px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fffcf5d4;
+}
+.rv{
+    font-family:Palatino Linotype ;
+    font-size: 15px;
+    margin: 165px 0 15px 0;
+    font-weight: 600;
+}
+.room_intro{
+    font-family:Palatino Linotype ;
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing:5px;
+    border-top: black solid 4px;
+    border-bottom: black solid 1px;
+    padding: 20px 0;
+    color: #4B413C;
+
+
+}
+.show_room{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-top: 100px;
+}
+.show_room li{
+    margin-bottom: 100px;
+}
+ .show_room li:hover .roomimg_box img{
+    transform: scale(120%);
+} 
+
+.roomimg_box{
+    /* <!-- 크기 381 400  --> */
+    width: 381px;
+    height: 400px;
+    overflow: hidden;
+    transition: all 0.1s;
+
+}
+
+
+.roomimg_box img{
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+
+
+}
+
+.roomtext_box{
+    text-align: left;
+
+}
+.room_name{
+    color: #4B413C;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 38px 0 20px 0;
+    border-bottom: #4B413C solid 2px;
+
+
+}
+.room_exp{
+    font-weight: 500;
+    line-height: 25px;
+    margin: 20px 0;
+    font-size: 15px;
+
+}
+.room_button{
+display: inline-block;
+color: #FFFDFC;
+background-color: #4B413C;
+padding: 8px 16px;
+border-radius: 30px;
+}
+.room_button:hover{
+    background-color: black;
+}
+
+/* section3_e */
+/* footer_s */
 #footer_wrap{
     height: 149px;
     background-color: #4B413C;
@@ -651,7 +762,3 @@ img {
     height: 30px;
     margin-top: 2px;
 }
-
-
-
-

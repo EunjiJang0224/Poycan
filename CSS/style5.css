@@ -283,7 +283,7 @@ body {
 
 #main_banner{
     height: 550px;
-    
+    box-sizing: border-box;
    background-color: #fffcf5d4;
     background-size: cover;
 }
@@ -296,19 +296,17 @@ body {
 }
 .main_img{
     width: 50%;
-    
+    box-sizing: border-box;
    position: relative;
+   background: url(../images/product2.png) no-repeat center top -140px;
+   background-size: 500px;
 }
-.main_img img{
-    position: absolute;
-    top: 40px;
-    left: 180px;
-    width: 52%;
-}
+
 .main_text{
     width: 50%;
     margin-top: 80px;
     padding-bottom: 60px;
+    box-sizing: border-box;
 } 
 .small_title{
     font-weight: 700;
@@ -497,6 +495,7 @@ input[type='radio']:checked {
     background-size: 280px;
 
   }
+ 
   .swiper-slide:nth-child(2) {
     background: url(../images/product1.png) no-repeat center top 0px;
     background-size: 222px;
@@ -589,7 +588,7 @@ padding-top: 130px;
 .con2_r{
     width: 35%;
     height: 900px;
-    padding: 520px 0 0 80px;
+    padding: 520px 50px 0 80px;
     box-sizing: border-box;
 
 }
@@ -616,7 +615,7 @@ padding-top: 130px;
 /* con3_S */
 
 #contents3{
-    height: 1000px;
+    height: 900px;
  
     box-sizing: border-box;
     
@@ -627,9 +626,10 @@ padding-top: 130px;
     margin-top: 80px;
 }
 .con3_l{
-    height: 1000px;
+    height: 900px;
     width: 35%;
-    padding: 520px 0 0 80px;
+    padding: 450px 50px 0 80px;
+    box-sizing: border-box;
 }
 .con3_r{
     height: 900px;

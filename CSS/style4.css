@@ -369,7 +369,7 @@ transform: translateY(-5px) rotate(-135deg);
 /* contents1_s */
 
 #contents1_wrap{
-    height: 3280px;
+    height: 3980px;
     position: relative;
     background-color: #fffcf5d4;
     display: flex;
@@ -563,6 +563,7 @@ html ul.tabs li.active  {
 .menu_wrap{
     display: flex;
     margin-top: 30px;
+    
 }
 
 .menu_pt1{
@@ -699,6 +700,42 @@ html ul.tabs li.active  {
     letter-spacing: 2px;
     margin-bottom: 30px;
    
+}
+/* 별점 */
+.about2{
+    margin-top: 150px;
+}
+.review-slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.review-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.review-slide {
+    min-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.review-profile img{
+    width: 500px;
+    height: 340px;
+}
+.user-name{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.review-rating{
+    padding: 10px 0;
+}
+.review-date{
+    margin-top: 20px;
+    opacity: 70%;
 }
  /* footer_s */
 #footer_wrap{
